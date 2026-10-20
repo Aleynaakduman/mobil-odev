@@ -1,0 +1,48 @@
+﻿
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="KahveSiparis.MainPage"
+    Title="Kahve Siparişi">
+
+    <VerticalStackLayout Padding="25" Spacing="18">
+
+        <Label
+            Text="Kahve Siparişi"
+            FontSize="28"
+            FontAttributes="Bold"
+            HorizontalOptions="Center" />
+
+        <Label Text="Adınız:" />
+
+        <Entry
+            x:Name="AdEntry"
+            Placeholder="Adınızı girin" />
+
+        <Label Text="Kahve türü:" />
+
+        <Entry
+            x:Name="KahveEntry"
+            Placeholder="Örn. Latte" />
+
+        <Label
+            x:Name="SekerLabel"
+            Text="Şeker miktarı: 2" />
+
+        <Slider
+            x:Name="SekerSlider"
+            Minimum="0"
+            Maximum="5"
+            Value="2"
+            ValueChanged="SekerSlider_ValueChanged" />
+
+        <Button
+            Text="Sipariş Ver"
+            Clicked="SiparisButton_Clicked" />
+
+        <Label
+            x:Name="SonucLabel"
+            FontSize="16" />
+
+    </VerticalStackLayout>
+</ContentPage>
